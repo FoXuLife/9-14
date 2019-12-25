@@ -1,0 +1,32 @@
+#include <iostream>
+#include <stdlib.h>
+using namespace std;
+int main()
+{
+        int arr[6],x,i,summa1,summa2;
+        cout<<"Enter a six digit number: ";
+        cin>>x;
+        i=0;
+        while (x>0) {
+                arr[i]=x%10;
+                i++;
+                x=x/10;
+        }
+        for (i=0; i<=2; i++) {cout<<arr[i];}
+        cout<<" ";
+        for (i=3; i<=5; i++) {cout<<arr[i];}
+        cout<<endl;
+        for (i=0; i<=2; i++) {
+                summa1=summa1+arr[i];
+        }
+        for (i=3; i<=5; i++) {
+                summa2=summa2+arr[i];
+        }
+        if (summa1==summa2) {
+                cout<<"You have a lucky ticket"<<endl;
+        } else {
+                cout<<"You have an unlucky ticket"<<endl;
+        }
+}
+123456
+
