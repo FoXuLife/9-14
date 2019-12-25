@@ -1,0 +1,45 @@
+--3
+io.write("Гуси     Кролики\n")
+
+n=64
+a=0
+i=0
+repeat
+    if n%4==0 then
+        a=a+i
+        b=n/4
+        io.write(a,"        ",b,"\n")
+    end
+    n=n-2
+    i=2
+until n<0
+
+--4 ГЕНИАЛЬНО
+sum=tonumber(io.read())
+io.write("\nВведите сумму в копейках: ",sum,"\n")
+io.write("5         2         10\n")
+
+for two=0,math.floor(sum/2) do
+    for five=0,math.floor(sum/5) do
+        for ten=0,math.floor(sum/10) do
+            if ten*10+five*5+two*2==sum then
+                io.write("\n",two,"         ",five,"         ",ten,"         ") end end end end
+
+--5
+a=31
+b=21
+sum=1770
+io.write("\n\nЛощадь  Бык")
+
+f1=math.floor(sum/a)
+f2=math.floor(sum/b)
+for i=0,f1 do
+    for j=0,f2 do
+        if i*a+j*b==sum then io.write("\n",i,"       ",j) end end end
+
+
+
+
+
+
+20

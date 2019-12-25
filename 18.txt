@@ -1,0 +1,20 @@
+--3+4
+io.write("Члены ряда, меньшего 10^-5:\n")
+kek=0,00001;
+function fac(n) -- способен посчитать до !20 вкл
+    if (n == 0) then
+        return 1
+    else
+        return n * fac(n - 1)
+    end
+end
+
+j=0
+for i=1,20 do
+    a=10^i/fac(i)
+    if a>kek then
+        io.write(a,"\n")
+        j=j+1
+    end
+end
+io.write("Таких чисел: ",j,"\n")

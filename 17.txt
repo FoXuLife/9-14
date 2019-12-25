@@ -1,0 +1,29 @@
+--3
+a=tonumber(io.read())
+b=tonumber(io.read())
+eps=tonumber(io.read())
+
+io.write("Введите границы отрезка: ",a,"; ",b,"\n")
+io.write("Введите точность расчетов: ",eps,"\n")
+
+repeat 
+   c=(a+b)/2 -- 0
+   fa=math.cos(a)+math.sin(b)
+   --io.write(math.cos(a),"+",math.sin(b)," => fa=",fa,"\n")
+   fb=math.cos(b)+math.sin(b)
+   --io.write(math.cos(b),"+",math.sin(b)," => fb=",fb,"\n")
+   fc=math.cos(c)+math.sin(c) --<0
+   --io.write(math.cos(c),"+",math.sin(c)," => fc=",fc,"\n")
+    
+   if (fa*fc<0) then
+       b=c else
+       a=c
+   end
+   print(c)
+until math.abs(b-a)<=eps -->
+
+
+
+-5
+5
+0.01
